@@ -1,4 +1,5 @@
-﻿@{
+﻿@model PersonalSiteMVC.Models.ContactViewModel
+@{
     ViewBag.Title = "Contact";
 }
 
@@ -21,39 +22,40 @@
 
             <div class="section-title">
                 <h2>Contact</h2>
-                <h3>Not Functional Yet</h3>
+
+                <h3>Send me a message below and I'll get back to you soon.</h3>
+               
             </div>
             <div class="col-lg-12">
 
-                <form id="contactForm" action="forms/contact.php" method="post" role="form" class="php-email-form">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
                     <div class="form-row">
                         <div class="col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="validate"></div>
+
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                         </div>
                         <div class="col-md-6 form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                            <div class="validate"></div>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                        <div class="validate"></div>
+                        @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", @placeholder = "Subject" } })
+                        @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                        <div class="validate"></div>
+                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message" } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                     </div>
-                    <div class="mb-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                </form>
+                    <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+                }
 
-            </div>
-
+                </div>
+            <div>@ViewBag.SendEmailError</div>
         </div>
     </section><!-- End Contact Section -->
 

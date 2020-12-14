@@ -124,6 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -139,9 +140,12 @@
     <Content Include="Content\assets\img\classmates\testimonials-3.jpg" />
     <Content Include="Content\assets\img\classmates\testimonials-4.jpg" />
     <Content Include="Content\assets\img\classmates\testimonials-5.jpg" />
+    <Content Include="Content\assets\img\DungeonAppPhoto.PNG" />
+    <Content Include="Content\assets\img\DungeonAppPhotoResized.jpg" />
     <Content Include="Content\assets\img\favicon.png" />
     <Content Include="Content\assets\img\hero-bg.jpg" />
     <Content Include="Content\assets\img\homekeyboard.jpg" />
+    <Content Include="Content\assets\img\PersonalSiteFav.ico" />
     <Content Include="Content\assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="Content\assets\img\portfolio\portfolio-2.jpg" />
     <Content Include="Content\assets\img\portfolio\portfolio-3.jpg" />
@@ -627,10 +631,11 @@
     <Content Include="_Archive\_Archive\assets\vendor\owl.carousel\README.md" />
     <Content Include="_Archive\_Archive\assets\vendor\typed.js\typed.min.js.map" />
     <Content Include="Views\Shared\_OriginalLayout.cshtml" />
+    <Content Include="Views\Home\Contact1.cshtml" />
+    <Content Include="Views\Home\EmailConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

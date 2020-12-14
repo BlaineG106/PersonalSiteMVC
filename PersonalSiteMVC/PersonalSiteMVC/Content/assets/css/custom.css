@@ -2,9 +2,7 @@
    margin-left: 410px;
 }
 
-#techText{
-    margin-left:400px;
-}
+
 
 #contactForm{
     padding-bottom: 4em;
@@ -17,5 +15,25 @@
 #kasey{
     max-height: 125px;
     
+}
+
+#portfoliosection {
+    text-align: center;
+    font-size: 1em;
+}
+
+#porth4 {
+    font-size: 1em;
+    padding-top: 25px;
+    font-weight: 600;
+}
+
+#portfoliobutton {
+    text-align: center;
+    padding-top: 25px;
+}
+
+#comingsoon {
+    padding-top: 25px;
 }
 
